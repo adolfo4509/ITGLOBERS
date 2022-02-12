@@ -6,11 +6,8 @@ const Header = () => {
 
   const [name, setName] = useState(null)
   const [input, setInput] = useState("")
-  const [namef, setnamef] = useState()
-  const [emailf, setemailf] = useState()
-  const [telefonf, settelefonf] = useState()
   const [show, setShow] = useState(false)
-  const [edadf, setedadf] = useState()
+
 
   //Creo el listado para el menu
   const list = [
@@ -47,26 +44,22 @@ const Header = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-   
-    console.log('Nombre:', input.name, 'Email:', input.email, 'Teléfono:', input.telefono, 'Edad:', input.edad)
+    setInput("")
 
-    setInput(null)
-    setnamef("")
-    setemailf("")
-    settelefonf("")
-    setedadf("")
     setShow(true)
     setTimeout(() => {
       setShow(false)
     }, 5000);
-
+    console.log('Nombre:', input.name, 'Email:', input.email, 'Teléfono:', input.telefono, 'Edad:', input.edad)
+    e.target.reset()
   };
 
   const handleChange = (e) => {
-   
+    const name = e.target.name
+    const value = e.target.value
     setInput({
       ...input,
-      [e.target.name]: e.target.value,
+      [name]: value,
     })
 
   }
@@ -97,10 +90,6 @@ const Header = () => {
       <Formulario
         handleSubmit={handleSubmit}
         handleChange={handleChange}
-        namef={namef}
-        emailf={emailf}
-        telefonf={telefonf}
-        edadf={edadf}
       />
 
     </div>
