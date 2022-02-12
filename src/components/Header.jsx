@@ -70,6 +70,7 @@ const Header = () => {
       <div key={list.id} className="contenedor">
 
         <div className='navegacion-principal'>
+          <span>Escoge tu aerolinea</span><br />
           {showlist()}
           <div className="sub"></div>
         </div>
