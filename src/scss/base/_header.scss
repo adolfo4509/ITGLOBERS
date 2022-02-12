@@ -178,13 +178,13 @@ input{
   left: 0;
 }
 .aviso{
-    padding: 2rem 0rem;
+    padding: 2.5rem 0rem;
     position: relative;
     top:50%;
     background-color: v.$colorModal;
     color: v.$blanco;
     border-radius: 15px;
-    font-size: 1rem;
+    font-size: .95rem;
     margin: 5%;
    
 }
@@ -200,5 +200,6 @@ input{
         color: v.$blanco;
         border-radius: 15px;
         z-index: 1;
+        font-size: 1.5rem;
     }
 }
